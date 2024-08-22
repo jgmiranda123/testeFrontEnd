@@ -1,0 +1,14 @@
+No projeto pude demonstar um pouco do meu conhecimento em linguagens de front end com HTML,
+CSS, Javscript e Jquery. Deixando responsivo.
+
+No backend, pude demonstar um pouco do consumo de Api, utilizando PHP. E realizei tratativas de possíveis
+erros durante a utilização do sistema.
+
+Para funcionar o projeto é necessário apenas a biblioteca JQuery e um servidor PHP, eu utilizei o XAMP.
+E o navagador google chrome.
+
+Tentei deixar o máximo de comentários para fácil entendimento do código.
+
+Para entrar na pagina de login seus respectivos usuários e senha é:
+login = teste@testefrontend.com.br
+senha = testefrontend

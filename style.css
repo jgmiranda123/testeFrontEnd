@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #09bcea;
+    font-family: "Roboto", sans-serif;
+    transition: opacity 0.5s ease;
+}
+
+.login-container {
+    background-color: white;
+    font-family: "Roboto Black", sans-serif;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 370px;
+    height: 350px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    border-color: #059cee;
+    border-radius: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+button:hover {
+    background-color: #06B1F300;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.sidebar {
+    position: fixed ;
+    left: 0px;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background-color: #fafafa;
+    padding-top: 20px;
+    align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+.sidebar a:hover {
+    background-color: #059cee;
+}
+
+.container {
+    display: flex; /* Usa flexbox para alinhar as divs lado a lado */
+    justify-content: space-between; /* Espaço entre as divs */
+    padding: 20px;
+    width: 80%; /* Em vez de width: 800px */
+    padding: 2em; /* Espaçamento relativo */
+}
+
+/* Estilo para cada div */
+.box-right {
+    padding: 20px;
+    width: 500px;  /* Largura máxima */
+    max-height: 600px; /* Altura máxima */
+    margin: 10px;
+    background-color: #f0f0f0;
+    text-align: left;
+    border: 1px solid #ccc;
+    margin-top: 50px; /* Espaçamento abaixo do cabeçalho */
+}
+
+.box {
+    padding: 20px;
+    max-width: 1200px;  /* Largura máxima */
+    width: 600px;
+    max-height: 600px; /* Altura máxima */
+    margin: 10px;
+    background-color: #f0f0f0;
+    text-align: left;
+    border: 1px solid #ccc;
+    margin-top: 50px; /* Espaçamento abaixo do cabeçalho */
+}
+
+.div-transaction {
+    margin-top: 30px;
+    max-height: 400px; /* Altura máxima */
+    overflow: auto;    /* Adiciona barras de rolagem se necessário */
+    margin-left: 15px;
+}
+
+h2 {
+    margin-top: 0;
+    background-color: #3498db;
+    padding-bottom: 10px; /* Espaço entre o texto e a linha */
+    color: white;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Cada item da linha do tempo */
+.timeline-item {
+    font-family: "Roboto Light", sans-serif;
+    font-size: small;
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 40px; /* Espaço para o círculo da timeline */
+}
+
+/* Círculo da linha do tempo */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 60%;
+    background-color: #969292; /* Cor do círculo */
+    word-break: break-word; /* Quebra palavras longas */
+    text-align: left;
+}
+
+/* Linha vertical ligando os itens */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #858282;
+    top: 10px;
+    left: 5px;
+    height: 50px;
+    z-index: 1;
+}
+
+/* Remove a linha vertical no último item */
+.timeline-item:last-child::after {
+    display: flex;
+}
+
+/* Conteúdo de cada item */
+.timeline-content {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+}
+.add-transaction {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.botao-redondo {
+    width: 100%; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    border: 3px solid #3498db; /* Borda azul */
+    background-color: white; /* Fundo branco */
+    color: #3498db; /* Cor do texto azul */
+    border-radius: 20px; /* Torna o botão redondo */
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto Black", sans-serif;
+    align-items: center;
+    font-size: 16px; /* Tamanho do texto */
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s; /* Efeito ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse */
+.botao-redondo:hover {
+    background-color: #3498db; /* Fundo azul ao passar o mouse */
+    color: white; /* Texto branco ao passar o mouse */
+}
+
+.botao-redondo-right {
+    width: 200px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    border: 3px solid #3498db; /* Borda azul */
+    background-color: white; /* Fundo branco */
+    color: #3498db; /* Cor do texto azul */
+    border-radius: 20px; /* Torna o botão redondo */
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto Black", sans-serif;
+    align-items: center;
+    font-size: 16px; /* Tamanho do texto */
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s; /* Efeito ao passar o mouse */
+    float: right;
+    margin-top: 20px;
+}
+
+/* Efeito ao passar o mouse */
+.botao-redondo-right:hover {
+    background-color: #3498db; /* Fundo azul ao passar o mouse */
+    color: white; /* Texto branco ao passar o mouse */
+}
+
+
+.input-linha {
+    background: transparent;
+    width: 300px; /* Largura do input */
+    width: 100%; /* Largura do input */
+    border: none; /* Remove todas as bordas */
+    border-bottom: 2px solid #3498db; /* Apenas a linha embaixo */
+    padding: 10px;
+    font-size: 16px; /* Tamanho da fonte */
+    outline: none; /* Remove o contorno padrão ao focar */
+    transition: border-bottom-color 0.3s ease; /* Transição suave ao focar */
+}
+
+/* Efeito ao clicar (foco) no input */
+.input-linha:focus {
+    border-bottom-color: #f39c12; /* Muda a cor da linha ao focar */
+}
+
+.background-color {
+    background-color: #3498db;
+}
+
+/* Estilo para o cabeçalho */
+.header {
+    background-color: white; /* Cor de fundo azul */
+    padding: 20px; /* Espaçamento interno do cabeçalho */
+    text-align: left; /* Centraliza o conteúdo do cabeçalho */
+    position: fixed; /* Fixar o cabeçalho no topo */
+    top: 0; /* Ficar no topo da página */
+    left: 0;
+    width: 100%; /* O cabeçalho ocupa a largura total da página */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    margin-left: 100px; /* Espaço superior para evitar que o conteúdo fique embaixo do cabeçalho */
+
+}
+
+.header-div {
+    background-color: white; /* Cor de fundo azul */
+    padding: 20px; /* Espaçamento interno do cabeçalho */
+    text-align: left; /* Centraliza o conteúdo do cabeçalho */
+    position: fixed; /* Fixar o cabeçalho no topo */
+    top: 0; /* Ficar no topo da página */
+    left: 0;
+    width: 100%; /* O cabeçalho ocupa a largura total da página */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    margin-left: 100px; /* Espaço superior para evitar que o conteúdo fique embaixo do cabeçalho */
+}
+
+/* Estilo para a caixa clicável com o nome "Título" */
+.titulo-link {
+    background-color: white; /* Fundo branco para o botão */
+    color: deepskyblue; /* Texto azul */
+    padding: 10px 20px; /* Espaçamento interno do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 20px; /* Tamanho da fonte */
+    border-radius: 5px; /* Borda arredondada */
+    border: none; /* Borda azul */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse sobre o link */
+.titulo-link:hover {
+    background-color: #3498db; /* Muda o fundo para azul ao passar o mouse */
+    color: white; /* Muda o texto para branco */
+}
+
+/* Estiliza a div que contém o cabeçalho */
+.header-container {
+    background-color: #3498db; /* Cor de fundo azul */
+    padding: 20px; /* Espaçamento ao redor do cabeçalho */
+    margin-bottom: 20px;
+}
+
+/* Estiliza o título */
+.titulo {
+    color: white; /* Cor do texto branco */
+    font-size: 28px; /* Tamanho da fonte do título */
+    margin: 0; /* Remove a margem padrão do h1 */
+    margin-bottom: 25px;
+}
+
+.a {
+    width: 30px;
+    height: 20px;
+    align: right;
+
+}
+
+.p {
+    text-align: center;
+}
+
+.positivo { /* classe para deixar os numero vermelhos quando positivo */
+    color: green;
+}
+
+.negativo { /* classe para deixar os numero vermelhos quando negativo */
+    color: red;
+}
+
+.fade-out { /* efeito de escurecimento da página */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 9999;
+}
+
+/* Estilo para a bolinha de carregamento */
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none; /* Inicialmente escondido */
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(150, 146, 146);
+}
+
+.spinner { /* bolinha de carregamento para transição de página */
+    width: 50px;
+    height: 50px;
+    border: 8px solid rgb(255, 255, 255);
+    border-top: 8px solid #059cee;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
